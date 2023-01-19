@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Data, Router } from '@angular/router';
-import { DataService } from 'src/app/views/srvices/data.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -11,24 +10,13 @@ export class ProfileComponent implements OnInit {
   tosend: any;
   data: any;
 
-  constructor(private route:Router,private ds:DataService) { }
+  constructor() { }
 
-  ngOnInit(): void { this.tosend=this.data
+  ngOnInit(): void {
   }
-  add(f:any){
-    let data=f.value
-
-    console.log(data)
-   
-
-    this.ds.addCommand(data).subscribe(data=>{ 
-
-
-      this.route.navigate(['/profile/panier'],{state:{data:this.tosend}})
-
-      })
+ 
     
-     }
+    
      
 
 }

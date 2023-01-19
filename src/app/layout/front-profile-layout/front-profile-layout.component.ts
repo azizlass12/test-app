@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthCoursierService } from 'src/app/views/srvices/authcoursier.service';
-import { AuthuserService } from 'src/app/views/srvices/authuser.service';
+
 
 @Component({
   selector: 'app-front-profile-layout',
@@ -11,7 +10,7 @@ import { AuthuserService } from 'src/app/views/srvices/authuser.service';
 export class FrontProfileLayoutComponent implements OnInit {
   username:any
   name:any
-    constructor(private ads:AuthCoursierService,private route:Router) {
+    constructor(private route:Router) {
     
     
     // this.username=this.ads.getusername()
